@@ -1,9 +1,13 @@
-name: 'My Custom JavaScript Action'
-description: 'Description of my custom action'
+name: 'Hello World JS Action'
+description: 'Greet someone and record the time'
 inputs:
-  exampleInput:
-    description: 'An example input'
+  who-to-greet:
+    description: 'Who to greet'
     required: true
+    default: 'World'
+outputs:
+  time:
+    description: 'The time we greeted you'
 runs:
   using: 'node12'
   main: 'action/index.js'
