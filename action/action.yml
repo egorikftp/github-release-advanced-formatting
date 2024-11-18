@@ -1,9 +1,0 @@
-name: 'My Custom JavaScript Action'
-description: 'Description of my custom action'
-inputs:
-  exampleInput:
-    description: 'An example input'
-    required: true
-runs:
-  using: 'node12'
-  main: 'index.js'
