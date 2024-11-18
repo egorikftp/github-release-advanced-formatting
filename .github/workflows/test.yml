@@ -1,21 +1,24 @@
 name: Test JavaScript Action
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '12'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
 
-    - name: check action
-      uses: ./
-      with:
-        who-to-greet: Yahor
+      - name: Install dependencies
+        run: npm install
+
+      - name: check action
+        uses: ./
+        with:
+          who-to-greet: Yahor
